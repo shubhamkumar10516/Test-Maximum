@@ -18,4 +18,13 @@ public class TestMaximum {
 		max = c.compareTo(max) > 0 ? c : max;
 		return max;
 	}
+	
+	//find max among Strings
+		public static String findMaxOfThree(String a, String b, String c) {
+
+			String max = a;
+			max = b.compareTo(max) > 0 ? b : max;
+			max = c.compareTo(max) > 0 ? c : max;
+			return max;
+		}
 }

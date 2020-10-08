@@ -35,4 +35,19 @@ public class TestMaximumTest {
 	public void findMaxOfThreeTc6() {
 		assertTrue(900.23 == TestMaximum.findMaxOfThree(400.5, 200.8, 900.23));
 	}
+	
+	@Test
+	public void findMaxOfThreeTc7() {
+		assertTrue("apcd".equals(TestMaximum.findMaxOfThree("apcd", "acdf", "adfe")));
+	}
+	
+	@Test
+	public void findMaxOfThreeTc8() {
+		assertTrue("almn".equals(TestMaximum.findMaxOfThree("afde", "almn", "ajkl")));
+	}
+	
+	@Test
+	public void findMaxOfThreeTc9() {
+		assertTrue("ravan".equals(TestMaximum.findMaxOfThree("ram", "ramayan", "ravan")));
+	}
 }
