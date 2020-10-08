@@ -8,17 +8,17 @@ public class TestMaximumTest {
 
 	@Test
 	public void findMaxOfThreeTc1() {
-		assertEquals(300, TestMaximum.findMaxOfThree(300, 100, 200));
+		assertTrue(300 == TestMaximum.findMaxOfThree(300, 100, 200));
 	}
 	
 	@Test
 	public void findMaxOfThreeTc2() {
-		assertEquals(700, TestMaximum.findMaxOfThree(400, 700, 200));
+		assertTrue(700 == TestMaximum.findMaxOfThree(400, 700, 200));
 	}
 	
 	@Test
 	public void findMaxOfThreeTc3() {
-		assertEquals(900, TestMaximum.findMaxOfThree(400, 200, 900));
+		assertTrue(900 == TestMaximum.findMaxOfThree(400, 200, 900));
 	}
 	
 	@Test
@@ -38,16 +38,16 @@ public class TestMaximumTest {
 	
 	@Test
 	public void findMaxOfThreeTc7() {
-		assertTrue("apcd".equals(TestMaximum.findMaxOfThree("apcd", "acdf", "adfe")));
+		assertTrue("peach".equals(TestMaximum.findMaxOfThree("apple", "peach", "banana")));
 	}
 	
 	@Test
 	public void findMaxOfThreeTc8() {
-		assertTrue("almn".equals(TestMaximum.findMaxOfThree("afde", "almn", "ajkl")));
+		assertTrue("peach".equals(TestMaximum.findMaxOfThree("peach", "apple", "banana")));
 	}
 	
 	@Test
 	public void findMaxOfThreeTc9() {
-		assertTrue("ravan".equals(TestMaximum.findMaxOfThree("ram", "ramayan", "ravan")));
+		assertTrue("peach".equals(TestMaximum.findMaxOfThree("peach", "banana", "apple")));
 	}
 }
