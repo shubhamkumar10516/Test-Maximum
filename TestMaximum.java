@@ -24,7 +24,7 @@ class Generic<T extends Comparable<T>> {
 	T v1, v2, v3;
 	List<T> list = new ArrayList<>();
 
-	// constructor
+	// default constructor
 	public Generic() {
 
 	}
@@ -44,5 +44,10 @@ class Generic<T extends Comparable<T>> {
 	// extended max method uc4
 	public T testMaximumExtended(List<T> list) {
 		return TestMaximum.testMaximum(list);
+	}
+
+	// Print max method uc 5
+	public <T extends Comparable<T>> void printMax(List<T> list) {
+		System.out.println("Max value is: " + TestMaximum.testMaximum(list));
 	}
 }
