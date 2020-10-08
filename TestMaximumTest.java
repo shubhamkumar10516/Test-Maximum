@@ -2,6 +2,9 @@ package com.bridgeLabz.testMaximum;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Test;
 
 public class TestMaximumTest {
@@ -67,5 +70,26 @@ public class TestMaximumTest {
 	public void testMaximumTc12() {
 		Generic<String> gnObj = new Generic<String>("apple","banana","pear");
 		assertTrue("pear".equals(gnObj.testMaximum()));
+	}
+	
+	@Test
+	public void testMaximumExtendedTc13() {
+		Generic<Integer> gnObj = new Generic<Integer>();
+		List<Integer> list = Arrays.asList(new Integer[] {5,8,2,0});
+		assertTrue(8 == gnObj.testMaximumExtended(list));
+	}
+	
+	@Test
+	public void testMaximumExtendedTc14() {
+		Generic<Double> gnObj = new Generic<Double>();
+		List<Double> list = Arrays.asList(new Double[] {5.0,8.0,2.0,9.0});
+		assertTrue(9.0 == gnObj.testMaximumExtended(list));
+	}
+	
+	@Test
+	public void testMaximumExtendedTc15() {
+		Generic<String> gnObj = new Generic<String>();
+		List<String> list = Arrays.asList(new String[] {"ram","ravan","raju","rohit"});
+		assertTrue("rohit".equals(gnObj.testMaximumExtended(list)));
 	}
 }
