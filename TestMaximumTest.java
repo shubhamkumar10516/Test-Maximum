@@ -50,4 +50,22 @@ public class TestMaximumTest {
 	public void findMaxOfThreeTc9() {
 		assertTrue("ravan".equals(TestMaximum.findMaxOfThree("ram", "ramayan", "ravan")));
 	}
+        
+        @Test
+	public void testMaximumTc10() {
+		Generic<Integer> gnObj = new Generic<Integer>(4,3,1);
+		assertTrue(4 == (gnObj.testMaximum()));
+	}
+	
+	@Test
+	public void testMaximumTc11() {
+		Generic<Double> gnObj = new Generic<Double>(4.1,4.3,1.9);
+		assertTrue(4.3 == (gnObj.testMaximum()));
+	}
+	
+	@Test
+	public void testMaximumTc12() {
+		Generic<String> gnObj = new Generic<String>("apple","banana","pear");
+		assertTrue("pear".equals(gnObj.testMaximum()));
+	}
 }
