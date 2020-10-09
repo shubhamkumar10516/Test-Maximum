@@ -5,24 +5,25 @@ import java.util.*;
 public class TestMaximum {
 
 	// find max among integers
-	public static <T extends Comparable<T>> T testMaximum(T a, T b, T c) {
+	public static <T extends Comparable<T>> T testMaximum(T a, T b, T c, T... d) {
 		T max = a;
 		max = b.compareTo(max) > 0 ? b : max;
 		max = c.compareTo(max) > 0 ? c : max;
+		for (T val : d)
+			max = val.compareTo(max) > 0 ? val : max;
 		return max;
 	}
+	
 
-	// extending maximum method
-	public static <T extends Comparable<T>> T testMaximum(List<T> list) {
-		Collections.sort(list);
-		return list.get(list.size() - 1);
+	// Print max method uc 5
+	public static<T extends Comparable<T>> void printMax(T a, T b, T c, T... d) {
+		System.out.println("Max value is: " + testMaximum(a, b, c, d));
 	}
 }
 
 class Generic<T extends Comparable<T>> {
 
 	T v1, v2, v3;
-	List<T> list = new ArrayList<>();
 
 	// default constructor
 	public Generic() {
@@ -39,15 +40,5 @@ class Generic<T extends Comparable<T>> {
 	// finding maximum method
 	public T testMaximum() {
 		return TestMaximum.testMaximum(v1, v2, v3);
-	}
-
-	// extended max method uc4
-	public T testMaximumExtended(List<T> list) {
-		return TestMaximum.testMaximum(list);
-	}
-
-	// Print max method uc 5
-	public <T extends Comparable<T>> void printMax(List<T> list) {
-		System.out.println("Max value is: " + TestMaximum.testMaximum(list));
 	}
 }

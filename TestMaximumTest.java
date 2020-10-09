@@ -74,29 +74,21 @@ public class TestMaximumTest {
 
 	@Test
 	public void testMaximumExtendedTc13() {
-		Generic<Integer> gnObj = new Generic<Integer>();
-		List<Integer> list = Arrays.asList(new Integer[] { 5, 8, 2, 0 });
-		assertTrue(8 == gnObj.testMaximumExtended(list));
+		assertTrue(9 == TestMaximum.testMaximum(6,7,1,9,0));
 	}
 
 	@Test
 	public void testMaximumExtendedTc14() {
-		Generic<Double> gnObj = new Generic<Double>();
-		List<Double> list = Arrays.asList(new Double[] { 5.0, 8.0, 2.0, 9.0 });
-		assertTrue(9.0 == gnObj.testMaximumExtended(list));
+		assertTrue(9.0 == TestMaximum.testMaximum(9.0,4.5,6.8,1.9));
 	}
 
 	@Test
 	public void testMaximumExtendedTc15() {
-		Generic<String> gnObj = new Generic<String>();
-		List<String> list = Arrays.asList(new String[] { "ram", "ravan", "raju", "rohit" });
-		assertTrue("rohit".equals(gnObj.testMaximumExtended(list)));
+		assertTrue("rohit".equals(TestMaximum.testMaximum("ram", "rohan","rohit","mohan")));
 	}
 
 	@Test
 	public void printArrayTc16() {
-		Generic<String> gnObj = new Generic<String>();
-		List<String> list = Arrays.asList(new String[] { "ram", "ravan", "raju", "rohit" });
-		gnObj.printMax(list);
+		TestMaximum.printMax("ravi", "ranu", "rajiv", "raz");
 	}
 }
